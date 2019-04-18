@@ -1,0 +1,117 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "react-native-atoz-list@git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+        "scope": null,
+        "escapedName": "react-native-atoz-list",
+        "name": "react-native-atoz-list",
+        "rawSpec": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+        "spec": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:MPower-Technologies/react-native-atoz-list.git",
+          "sshUrl": "git+ssh://git@github.com/MPower-Technologies/react-native-atoz-list.git",
+          "httpsUrl": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+          "gitUrl": "git://github.com/MPower-Technologies/react-native-atoz-list.git",
+          "shortcut": "github:MPower-Technologies/react-native-atoz-list",
+          "directUrl": "https://raw.githubusercontent.com/MPower-Technologies/react-native-atoz-list/master/package.json"
+        }
+      },
+      "/Users/jasonc/AKS/workspace/MPowerApp"
+    ]
+  ],
+  "_from": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+  "_id": "react-native-atoz-list@1.0.2",
+  "_inCache": true,
+  "_location": "/react-native-atoz-list",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-atoz-list@git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+    "scope": null,
+    "escapedName": "react-native-atoz-list",
+    "name": "react-native-atoz-list",
+    "rawSpec": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+    "spec": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:MPower-Technologies/react-native-atoz-list.git",
+      "sshUrl": "git+ssh://git@github.com/MPower-Technologies/react-native-atoz-list.git",
+      "httpsUrl": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+      "gitUrl": "git://github.com/MPower-Technologies/react-native-atoz-list.git",
+      "shortcut": "github:MPower-Technologies/react-native-atoz-list",
+      "directUrl": "https://raw.githubusercontent.com/MPower-Technologies/react-native-atoz-list/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/MPower-Technologies/react-native-atoz-list.git#c95fdd893657f6def057f675fd00b4bda8fad047",
+  "_shasum": "02558260e4070d35cc8cef552bcdc135e15f92e7",
+  "_shrinkwrap": null,
+  "_spec": "react-native-atoz-list@git+https://github.com/MPower-Technologies/react-native-atoz-list.git",
+  "_where": "/Users/jasonc/AKS/workspace/MPowerApp",
+  "author": {
+    "name": "rgovindji@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rgovindji/react-native-atoz-list/issues"
+  },
+  "dependencies": {},
+  "description": "High performance fixed height ListView to be used for a contact list or friends list in your application",
+  "devDependencies": {
+    "babel-jest": "^12.0.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "jest-cli": "^12.0.2",
+    "prop-types": "^15.6.0"
+  },
+  "gitHead": "c95fdd893657f6def057f675fd00b4bda8fad047",
+  "homepage": "https://github.com/rgovindji/react-native-atoz-list#readme",
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ]
+  },
+  "keywords": [
+    "selectlist",
+    "alphabetlist",
+    "contactlist"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "react-native-atoz-list",
+  "optionalDependencies": {},
+  "peerdependencies": {
+    "babel-plugin-syntax-trailing-function-commas": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
+    "fbemitter": "^2.0.2",
+    "fbjs": "^0.8.2",
+    "immutable": "^3.8.1",
+    "invariant": "^2.2.1",
+    "lodash": "^4.12.0",
+    "react": "^0.14.8",
+    "react-native": "^0.25.1",
+    "react-native-swipe-actions": "^0.5.3"
+  },
+  "readme": "This package is just a fork of the work of brentvatne: https://github.com/brentvatne/fixed-height-windowed-list-view-experiment\n\nI fixed some issues with the scrolling not working correctly and exposed the main listview component as AtoZList.\nThe scroll performance is great for large lists which is why I switched to using brentvatne's implementation.\n\n\n![Alt text](http://i.imgur.com/8JPUnt5.gif \"Example\")\n\n##Install\n```js\nnpm i -S react-native-atoz-list\n```\n\n##Usage\n\n```js\nimport AtoZList from 'react-native-atoz-list';\n\n..\n...\n\nlet myData = {\n    'A': [{..}, {...}, {...}],\n    'B': [{..}, {..}, {..}],\n    'C': [{..}, {..}, {..}]\n}\n\nrender(\n    return(\n        <AtoZList\n                sectionHeaderHeight={20}\n                cellHeight={60}\n                data={myData}\n                renderCell={this._renderCellComponent}\n                renderSection={this._renderSectionComponent}\n        />\n    );\n\n\n);\n\n```\n\n##Props\nNote: You need to set the section height and cellHeight\n\n\n| property        | Description           |\n| ------------- |-------------|\n| sectionHeaderHeight      | The height of each header section |\n| cellHeight      | The height of each cellheightred      |\n| data            | The data that will be displayed. This should be an object in the format  { 'A': [{..}, {..}], 'B': [{..}]} |\n| renderCell | This function will render you cell componenet. It will be passed the objects from each element in the data arrays.      |\n| renderSection | This function will render your section headers. It will be passed an object with key 'sectionId'. The value of 'sectionId' will be the keys from your data object. i.e 'A', 'B', 'C' etc..      |\n| onEndReached | Called when all rows have been rendered and the list has been scrolled to within onEndReachedThreshold of the bottom. The native scroll event is provided.\n\n## Authors\n\nRaheel Govindji <rgovindji@gmail.com>\nbrentvatne https://github.com/brentvatne\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgovindji/react-native-atoz-list.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "version": "1.0.2"
+}
