@@ -104,7 +104,7 @@ export default class FixedHeightWindowedListView extends Component {
     }
 
     let totalRows = this.props.dataSource.getRowCount();
-    rows.push(<View key="sp-bot" style={{height: spacerBottomHeight}} />);
+    rows.push(<View key="sp-bot" style={{height: isNaN(spacerBottomHeight) ? 0 : spacerBottomHeight}} />);
 
     return (
       <ScrollView
