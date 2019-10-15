@@ -34,6 +34,7 @@ export default class AtoZList extends Component {
     renderCell: PropTypes.func,
     renderSection: PropTypes.func,
     onEndReached: PropTypes.func,
+    onScroll: PropTypes.func,
   };
 
   constructor(props, context) {
@@ -71,7 +72,7 @@ export default class AtoZList extends Component {
 
 
   render() {
-    this._alphabetInstance = this._alphabetInstance || (
+    this._alphabetInstance = (
       <View style={styles.alphabetSidebar}>
         <AlphabetPicker alphabet={this.state.alphabet} onTouchLetter={this._onTouchLetter.bind(this)} />
       </View>
@@ -86,15 +87,15 @@ export default class AtoZList extends Component {
             renderCell={this.props.renderCell}
             renderSectionHeader={this.props.renderSection}
             incrementDelay={16}
-            initialNumToRender={12}
+            initialNumToRender={8}
             pageSize={Platform.OS === 'ios' ? 15 : 8}
             maxNumToRender={70}
             numToRenderAhead={40}
             numToRenderBehind={4}
             onEndReached={this.props.onEndReached}
+            onScroll={this.props.onScroll}
           />
         </View>
-
         {this._alphabetInstance}
       </View>
     );
